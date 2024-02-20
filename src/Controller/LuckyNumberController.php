@@ -17,7 +17,7 @@ class LuckyNumberController extends AbstractController
         ]);
     }
 
-    #[Route('/api/posts/{id}',name: "Number",methods:['GET','HEAD'],condition: "params['id']<=1000")]
+    #[Route('/api/posts/{id}',name: "Number",defaults: ["id"=>0],methods:['GET','HEAD'],condition: "params['id']<=1000")]
 public function show(int $id) :Response {
         return $this->json(["number"=>$id]);
     }

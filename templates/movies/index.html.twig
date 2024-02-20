@@ -9,8 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ name }}! ✅</h1>
 
+    {% if name=="World" %}
+         <h1>Hello {{ name }}  ✅</h1>
+
+    {% else %}
+       <p>WHoops !! , No title Is Initialized</p>
+    {% endif %}
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code>D:/web-masters/src/Controller/MoviesController.php</code></li>

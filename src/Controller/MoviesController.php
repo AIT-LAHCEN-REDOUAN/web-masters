@@ -14,7 +14,7 @@ class MoviesController extends AbstractController
 
         //return $this->json(["message" => "Hello World"]);
         return $this->render('movies/index.html.twig', [
-            'name' => 'MoviesController',
+            'name' => 'World',
         ]);
     }
 
