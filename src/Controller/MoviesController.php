@@ -8,13 +8,13 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class MoviesController extends AbstractController
 {
-    #[Route('/movies', name: 'app_movies')]
-    public function index(): Response
+    #[Route('/movies/{name}', name: 'app_movies',condition: "params['name']=='ENGLAND'")]
+    public function index(string $name): Response
     {
 
         //return $this->json(["message" => "Hello World"]);
         return $this->render('movies/index.html.twig', [
-            'name' => 'World',
+            'name' => $name,
         ]);
     }
 
