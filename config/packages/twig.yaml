@@ -1,5 +1,8 @@
 twig:
     file_name_pattern: '*.twig'
+    globals:
+        author: 'CODE WITH OVER POWER'
+
 
 when@test:
     twig:

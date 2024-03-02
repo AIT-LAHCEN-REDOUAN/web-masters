@@ -11,10 +11,18 @@
 <div class="example-wrapper">
     <h1>Hello {{ LuckyNumber }}! ✅</h1>
 
+    {{ author }}
+
+
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code>D:/web-masters/src/Controller/LuckyNumberController.php</code></li>
         <li>Your template at <code>D:/web-masters/templates/lucky_number/index.html.twig</code></li>
     </ul>
+    {% for i in LuckyNumber  %}
+        <h3>{{ i+1 }}</h3>
+        <br>
+    {% endfor %}
+
 </div>
 {% endblock %}
